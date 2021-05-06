@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfirmMissionDialog</class>
+ <widget class="QDialog" name="ConfirmMissionDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+	background: rgb(0,21,36);
+	font: 87 10pt &quot;Arial Black&quot;;
+}
+
+QLabel
+{
+	border-color:transparent; 
+	color: rgb(241,250,238);
+}
+
+QListView
+{	
+	background: transparent;
+	border: 3 solid;
+	border-color: rgb(38,84,124);
+	border-radius: 10;
+}
+
+QListView::item
+{
+	background-color: rgb(38,84,124);
+	border: 2 solid;
+	border-color: rgb(38,84,124);
+	border-radius: 10;
+	color: rgb(241,250,238);
+	min-height: 35;
+	margin: 3;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelWindowTitle">
+     <property name="text">
+      <string>CURRENT MISSION PARAMETERS</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="layoutTargetParemeters">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelTargetColor">
+       <property name="text">
+        <string>Target Color:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="labelTargetColorInput">
+       <property name="text">
+        <string>UNDEFINED</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelTargetShape">
+       <property name="text">
+        <string>Target Shape:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="labelTargetShapeInput">
+       <property name="text">
+        <string>UNDEFINED</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelTaskList">
+     <property name="text">
+      <string>Task List:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListView" name="listView"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelConfirmMission">
+     <property name="text">
+      <string>Confirm parameters and begin mission?</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(38,84,124);
+border: 2 solid;
+border-color: rgb(38,84,124);
+border-radius: 10;
+color: rgb(241,250,238);
+padding: 6;</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ConfirmMissionDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ConfirmMissionDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
