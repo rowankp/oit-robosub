@@ -1,0 +1,22 @@
+/*Adds color information into dry luminosity table
+Note - all H values for HSV should be based on a 180 degree system to accommodate OpenCV, most HSV systems are 360 degrees so simply divide the H value by 2
+Similarly all S and V values need to be converted from the standard 0-100% to a 0-255 value*/ 
+USING robosub.dry_luminosity;
+
+
+<<<<<<< HEAD
+// Color has not been added yet
+INSERT INTO robosub.dry_luminosity (color, r_value, g_value, b_value, h_max, h_min, s_max, s_min, v_max, v_min)
+VALUES ("red", 21, 4, 15, 10, 0, 255, 100, 255, 0),
+("blue", 5, 29, 82, 122.5, 95, 255, 122.5, 255, 51),
+("yellow", 93, 67, 9, 32, 22.5, 255, 153, 255, 66.3),
+("green", 41, 84, 18, 74, 37.5, 255, 127.5, 255, 25.5);
+=======
+INSERT INTO robosub.dry_luminosity (color_label, r_value, g_value, b_value, h_max, h_min, s_max, s_min, v_max, v_min)
+VALUES ("red", 21, 4, 15, 10, 0, 255, 100, 255, 0),
+	   ("blue", 5, 29, 82, 120, 110, 255, 22.5, 255, 76.5),
+	   ("yellow", 93, 67, 9, 40, 20, 255, 22.5, 255, 190),
+	   ("green", 41, 84, 18, 85, 40.5, 255, 25.5, 255, 76.5),
+	   ("black", 0, 0, 0, 180, 0, 255, 0, 40, 0),
+	   ("white", 255, 255, 255, 180, 0, 25, 0, 255, 200);
+>>>>>>> 38a4f9bb2327792c7251a868070618064131ba25

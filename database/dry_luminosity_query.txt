@@ -1,0 +1,18 @@
+/*Query to create dry luminosity table*/
+
+<<<<<<< HEAD
+CREATE TABLE robosub.dry_luminosity(light_level INTEGER PRIMARY KEY, light_description VARCHAR(10), r_value DOUBLE NOT NULL, g_value DOUBLE NOT NULL, b_value DOUBLE NOT NULL, h_max DOUBLE, h_min DOUBLE, s_max DOUBLE, s_min DOUBLE, v_max DOUBLE, v_min DOUBLE);
+=======
+CREATE TABLE robosub.dry_luminosity(color_label VARCHAR(10),
+									light_level INTEGER, 
+									light_description VARCHAR(10), 
+									r_value DOUBLE NOT NULL, 
+									g_value DOUBLE NOT NULL, 
+									b_value DOUBLE NOT NULL, 
+									h_max DOUBLE NOT NULL, 
+									h_min DOUBLE NOT NULL, 
+									s_max DOUBLE NOT NULL, 
+									s_min DOUBLE NOT NULL, 
+									v_max DOUBLE NOT NULL, 
+									v_min DOUBLE NOT NULL);
+>>>>>>> 38a4f9bb2327792c7251a868070618064131ba25
